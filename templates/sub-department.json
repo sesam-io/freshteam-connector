@@ -1,10 +1,10 @@
 [
   {
-    "_id": "xxxxxxxx-freshteam-sub-department-collect",
+    "_id": "{{@ system @}}-sub-department-collect",
     "type": "pipe",
     "source": {
       "type": "rest",
-      "system": "xxxxxxxx-freshteam",
+      "system": "{{@ system @}}",
       "operation": "get",
       "properties": {
         "url": "sub_departments"

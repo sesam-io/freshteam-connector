@@ -1,10 +1,10 @@
 [
   {
-    "_id": "xxxxxxxx-freshteam-employee-collect",
+    "_id": "{{@ system @}}-employee-collect",
     "type": "pipe",
     "source": {
       "type": "rest",
-      "system": "xxxxxxxx-freshteam",
+      "system": "{{@ system @}}",
       "operation": "get",
       "properties": {
         "url": "employees"
@@ -14,11 +14,11 @@
     "add_namespaces": false
   },
   {
-    "_id": "xxxxxxxx-freshteam-employee-share-insert",
+    "_id": "{{@ system @}}-employee-share-insert",
     "type": "pipe",
     "source": {
       "type": "dataset",
-      "dataset": "xxxxxxxx-freshteam-employee-transform"
+      "dataset": "<todo>"
     },
     "sink": {
       "set_initial_offset": "onload"
@@ -50,7 +50,7 @@
                   "hops",
                   {
                     "datasets": [
-                      "xxxxxxxx-freshteam-employee-share-insert f"
+                      "{{@ system @}}-employee-share-insert f"
                     ],
                     "where": [
                       [
@@ -112,7 +112,7 @@
       },
       {
         "type": "rest",
-        "system": "xxxxxxxx-freshteam",
+        "system": "{{@ system @}}",
         "operation": "insert",
         "replace_entity": false
       },
@@ -145,15 +145,15 @@
     "reprocessing_policy": "continue"
   },
   {
-    "_id": "xxxxxxxx-freshteam-employee-share-update",
+    "_id": "{{@ system @}}-employee-share-update",
     "type": "pipe",
     "source": {
       "type": "dataset",
-      "dataset": "xxxxxxxx-freshteam-employee-transform"
+      "dataset": "{{@ system @}}-employee-transform"
     },
     "sink": {
       "type": "rest",
-      "system": "xxxxxxxx-freshteam",
+      "system": "{{@ system @}}",
       "operation": "update"
     },
     "transform": [
@@ -191,7 +191,7 @@
       },
       {
         "type": "rest",
-        "system": "xxxxxxxx-freshteam",
+        "system": "{{@ system @}}",
         "operation": "get",
         "replace_entity": false
       },
@@ -212,7 +212,7 @@
                   "hops",
                   {
                     "datasets": [
-                      "xxxxxxxx-freshteam-employee-collect a"
+                      "{{@ system @}}-employee-collect a"
                     ],
                     "where": [
                       [

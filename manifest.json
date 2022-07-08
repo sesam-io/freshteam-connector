@@ -21,10 +21,6 @@
     },
     "team": {
       "template": "templates/team.json"
-    },
-    "user": {
-      "template": "templates/user.json",
-      "bidirectional": true
     }
   },
   "system-template": "templates/system.json"

@@ -1,5 +1,5 @@
 {
-  "_id": "xxxxxxxx-freshteam",
+  "_id": "{{@ system @}}",
   "type": "system:rest",
   "headers": {
     "Authorization": "$SECRET(freshteam-jwt)",

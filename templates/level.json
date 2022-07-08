@@ -1,10 +1,10 @@
 [
   {
-    "_id": "xxxxxxxx-freshteam-level-collect",
+    "_id": "{{@ system @}}-level-collect",
     "type": "pipe",
     "source": {
       "type": "rest",
-      "system": "xxxxxxxx-freshteam",
+      "system": "{{@ system @}}",
       "operation": "get",
       "properties": {
         "url": "levels"
