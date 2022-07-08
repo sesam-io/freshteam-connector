@@ -1,0 +1,35 @@
+{
+  "_id": "xxxxxxxx-freshteam",
+  "type": "system:rest",
+  "headers": {
+    "Authorization": "$SECRET(freshteam-jwt)",
+    "accept": "application/json"
+  },
+  "operations": {
+    "delete": {
+      "method": "DELETE",
+      "url": "{{ properties.type }}/{{ properties.id }}"
+    },
+    "get": {
+      "id_expression": "{{ id }}",
+      "method": "GET",
+      "next_page_link": "{{ body.paging.next.link }}",
+      "since_property_location": "query",
+      "since_property_name": "updated_since",
+      "updated_expression": "{{ updated_at }}",
+      "url": "{{ properties.url }}"
+    },
+    "insert": {
+      "method": "POST",
+      "payload-type": "json",
+      "url": "{{ properties.url }}?"
+    },
+    "update": {
+      "method": "PUT",
+      "payload-type": "json",
+      "url": "{{ properties.url }}"
+    }
+  },
+  "url_pattern": "https://sesam-1644844355362.freshteam.com/api/%s",
+  "verify_ssl": true
+}

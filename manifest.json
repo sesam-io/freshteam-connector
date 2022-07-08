@@ -1,0 +1,31 @@
+{
+  "datatypes": {
+    "branch": {
+      "template": "templates/branch.json"
+    },
+    "business-unit": {
+      "template": "templates/business-unit.json"
+    },
+    "department": {
+      "template": "templates/department.json"
+    },
+    "employee": {
+      "template": "templates/employee.json",
+      "bidirectional": true
+    },
+    "level": {
+      "template": "templates/level.json"
+    },
+    "sub-department": {
+      "template": "templates/sub-department.json"
+    },
+    "team": {
+      "template": "templates/team.json"
+    },
+    "user": {
+      "template": "templates/user.json",
+      "bidirectional": true
+    }
+  },
+  "system-template": "templates/system.json"
+}

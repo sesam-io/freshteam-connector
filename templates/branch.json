@@ -1,0 +1,16 @@
+[
+  {
+    "_id": "xxxxxxxx-freshteam-branch-collect",
+    "type": "pipe",
+    "source": {
+      "type": "rest",
+      "system": "xxxxxxxx-freshteam",
+      "operation": "get",
+      "properties": {
+        "url": "branches"
+      },
+      "supports_since": true
+    },
+    "add_namespaces": false
+  }
+]

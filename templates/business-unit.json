@@ -1,0 +1,16 @@
+[
+  {
+    "_id": "xxxxxxxx-freshteam-business-unit-collect",
+    "type": "pipe",
+    "source": {
+      "type": "rest",
+      "system": "xxxxxxxx-freshteam",
+      "operation": "get",
+      "properties": {
+        "url": "business_units"
+      },
+      "supports_since": true
+    },
+    "add_namespaces": false
+  }
+]
