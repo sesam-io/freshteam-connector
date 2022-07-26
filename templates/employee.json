@@ -11,6 +11,9 @@
       },
       "supports_since": true
     },
+    "sink": {
+      "set_initial_offset": "onload"
+    },
     "add_namespaces": false
   },
   {
