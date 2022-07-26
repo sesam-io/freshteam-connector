@@ -21,7 +21,7 @@
     "type": "pipe",
     "source": {
       "type": "dataset",
-      "dataset": "<todo>"
+      "dataset": "{{@ system @}}-employee-transform"
     },
     "sink": {
       "set_initial_offset": "onload"
