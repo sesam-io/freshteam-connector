@@ -23,5 +23,6 @@
       "template": "templates/team.json"
     }
   },
-  "system-template": "templates/system.json"
+  "system-template": "templates/system.json",
+  "auth": "api_token"
 }
