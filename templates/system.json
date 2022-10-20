@@ -30,6 +30,6 @@
       "url": "{{ properties.url }}"
     }
   },
-  "url_pattern": "https://{{@ account-id @}}.freshteam.com/api/%s",
+  "url_pattern": "https://{{@ account_id @}}.freshteam.com/api/%s",
   "verify_ssl": true
 }
