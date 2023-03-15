@@ -1,26 +1,33 @@
 {
   "datatypes": {
     "branch": {
-      "template": "templates/branch.json"
+      "template": "templates/branch.json",
+      "label": "Branch"
     },
     "business-unit": {
-      "template": "templates/business-unit.json"
+      "template": "templates/business-unit.json",
+      "label": "Business Unit"
     },
     "department": {
-      "template": "templates/department.json"
+      "template": "templates/department.json",
+      "label": "Department"
     },
     "employee": {
       "template": "templates/employee.json",
+      "label": "Employee",
       "bidirectional": true
     },
     "level": {
-      "template": "templates/level.json"
+      "template": "templates/level.json",
+      "label": "Level"
     },
     "sub-department": {
-      "template": "templates/sub-department.json"
+      "template": "templates/sub-department.json",
+      "label": "Sub-department"
     },
     "team": {
-      "template": "templates/team.json"
+      "template": "templates/team.json",
+      "label": "Team"
     }
   },
   "system-template": "templates/system.json",
