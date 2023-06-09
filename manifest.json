@@ -1,35 +1,38 @@
 {
+  "additional_parameters": {
+    "base_url": {}
+  },
+  "auth": "api_key",
   "datatypes": {
     "branch": {
-      "template": "templates/branch.json",
-      "label": "Branch"
+      "label": "Branch",
+      "template": "templates/branch.json"
     },
     "business-unit": {
-      "template": "templates/business-unit.json",
-      "label": "Business Unit"
+      "label": "Business Unit",
+      "template": "templates/business-unit.json"
     },
     "department": {
-      "template": "templates/department.json",
-      "label": "Department"
+      "label": "Department",
+      "template": "templates/department.json"
     },
     "employee": {
-      "template": "templates/employee.json",
+      "bidirectional": true,
       "label": "Employee",
-      "bidirectional": true
+      "template": "templates/employee.json"
     },
     "level": {
-      "template": "templates/level.json",
-      "label": "Level"
+      "label": "Level",
+      "template": "templates/level.json"
     },
     "sub-department": {
-      "template": "templates/sub-department.json",
-      "label": "Sub-department"
+      "label": "Sub-department",
+      "template": "templates/sub-department.json"
     },
     "team": {
-      "template": "templates/team.json",
-      "label": "Team"
+      "label": "Team",
+      "template": "templates/team.json"
     }
   },
-  "system-template": "templates/system.json",
-  "auth": "api_key"
+  "system-template": "templates/system.json"
 }

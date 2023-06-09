@@ -1,35 +1,94 @@
 {
   "_id": "{{@ system @}}",
-  "type": "system:rest",
   "headers": {
     "Authorization": "Bearer $SECRET(api_key)",
     "accept": "application/json"
   },
   "operations": {
-    "delete": {
-      "method": "DELETE",
-      "url": "{{ properties.type }}/{{ properties.id }}"
-    },
-    "get": {
+    "branch-list": {
       "id_expression": "{{ id }}",
       "method": "GET",
       "next_page_link": "{{ body.paging.next.link }}",
       "since_property_location": "query",
       "since_property_name": "updated_since",
       "updated_expression": "{{ updated_at }}",
-      "url": "{{ properties.url }}"
+      "url": "branches"
     },
-    "insert": {
+    "business-unit-list": {
+      "id_expression": "{{ id }}",
+      "method": "GET",
+      "next_page_link": "{{ body.paging.next.link }}",
+      "since_property_location": "query",
+      "since_property_name": "updated_since",
+      "updated_expression": "{{ updated_at }}",
+      "url": "business_units"
+    },
+    "department-list": {
+      "id_expression": "{{ id }}",
+      "method": "GET",
+      "next_page_link": "{{ body.paging.next.link }}",
+      "since_property_location": "query",
+      "since_property_name": "updated_since",
+      "updated_expression": "{{ updated_at }}",
+      "url": "departments"
+    },
+    "employee-delete": {
+      "method": "DELETE",
+      "payload-type": "json",
+      "url": "employees/{{ entity.id }}"
+    },
+    "employee-insert": {
       "method": "POST",
       "payload-type": "json",
-      "url": "{{ properties.url }}?"
+      "url": "employees"
     },
-    "update": {
+    "employee-list": {
+      "id_expression": "{{ id }}",
+      "method": "GET",
+      "next_page_link": "{{ body.paging.next.link }}",
+      "since_property_location": "query",
+      "since_property_name": "updated_since",
+      "updated_expression": "{{ updated_at }}",
+      "url": "employees"
+    },
+    "employee-lookup": {
+      "method": "GET",
+      "url": "employees/{{ entity.id }}"
+    },
+    "employee-update": {
       "method": "PUT",
       "payload-type": "json",
-      "url": "{{ properties.url }}"
+      "url": "employees/{{ entity.id }}"
+    },
+    "level-list": {
+      "id_expression": "{{ id }}",
+      "method": "GET",
+      "next_page_link": "{{ body.paging.next.link }}",
+      "since_property_location": "query",
+      "since_property_name": "updated_since",
+      "updated_expression": "{{ updated_at }}",
+      "url": "levels"
+    },
+    "sub-department-list": {
+      "id_expression": "{{ id }}",
+      "method": "GET",
+      "next_page_link": "{{ body.paging.next.link }}",
+      "since_property_location": "query",
+      "since_property_name": "updated_since",
+      "updated_expression": "{{ updated_at }}",
+      "url": "sub_departments"
+    },
+    "team-list": {
+      "id_expression": "{{ id }}",
+      "method": "GET",
+      "next_page_link": "{{ body.paging.next.link }}",
+      "since_property_location": "query",
+      "since_property_name": "updated_since",
+      "updated_expression": "{{ updated_at }}",
+      "url": "teams"
     }
   },
-  "url_pattern": "https://{{@ account_id @}}.freshteam.com/api/%s",
+  "type": "system:rest",
+  "url_pattern": "{{@ base_url @}}/api/%s",
   "verify_ssl": true
 }

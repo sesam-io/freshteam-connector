@@ -1,16 +1,35 @@
-[
-  {
-    "_id": "{{@ system @}}-branch-collect",
-    "type": "pipe",
-    "source": {
-      "type": "rest",
-      "system": "{{@ system @}}",
-      "operation": "get",
-      "properties": {
-        "url": "branches"
+{
+  "_id": "{{@ system @}}-{{@ datatype @}}-collect",
+  "add_namespaces": false,
+  "sink": {
+    "set_initial_offset": "onload"
+  },
+  "source": {
+    "operation": "{{@ datatype @}}-list",
+    "supports_since": true,
+    "system": "{{@ system @}}",
+    "type": "rest"
+  },
+  "transform": [
+    {
+      "rules": {
+        "default": [
+          [
+            "copy",
+            "*"
+          ],
+          [
+            "add",
+            "$last-modified",
+            [
+              "datetime",
+              "_S.updated_at"
+            ]
+          ]
+        ]
       },
-      "supports_since": true
-    },
-    "add_namespaces": false
-  }
-]
+      "type": "dtl"
+    }
+  ],
+  "type": "pipe"
+}
