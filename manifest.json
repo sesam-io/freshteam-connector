@@ -10,11 +10,11 @@
     },
     "business-unit": {
       "label": "Business Unit",
-      "template": "templates/business-unit.json"
+      "template": "templates/branch.json"
     },
     "department": {
       "label": "Department",
-      "template": "templates/department.json"
+      "template": "templates/branch.json"
     },
     "employee": {
       "bidirectional": true,
@@ -23,15 +23,15 @@
     },
     "level": {
       "label": "Level",
-      "template": "templates/level.json"
+      "template": "templates/branch.json"
     },
     "sub-department": {
       "label": "Sub-department",
-      "template": "templates/sub-department.json"
+      "template": "templates/branch.json"
     },
     "team": {
       "label": "Team",
-      "template": "templates/team.json"
+      "template": "templates/branch.json"
     }
   },
   "system-template": "templates/system.json"
