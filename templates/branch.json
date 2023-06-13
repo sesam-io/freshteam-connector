@@ -1,16 +1,52 @@
-[
-  {
-    "_id": "{{@ system @}}-branch-collect",
-    "type": "pipe",
-    "source": {
-      "type": "rest",
-      "system": "{{@ system @}}",
-      "operation": "get",
-      "properties": {
-        "url": "branches"
+{
+  "_id": "{{@ system @}}-{{@ datatype @}}-collect",
+  "add_namespaces": false,
+  "sink": {
+    "set_initial_offset": "onload"
+  },
+  "source": {
+    "operation": "{{@ datatype @}}-list",
+    "supports_since": false,
+    "system": "{{@ system @}}",
+    "type": "rest"
+  },
+  "transform": [
+    {
+      "rules": {
+        "default": [
+          [
+            "copy",
+            "*"
+          ],
+          [
+            "add",
+            "$last-modified",
+            [
+              "datetime",
+              "_S.updated_at"
+            ]
+          ],
+          [
+            "comment",
+            "When an object is deleted in Freshteam the object can still appear in the api, but with the 'deleted' property set to true. If that happens we must set the _deleted to true also."
+          ],
+          [
+            "if",
+            [
+              "eq",
+              "_S.deleted",
+              true
+            ],
+            [
+              "add",
+              "_deleted",
+              true
+            ]
+          ]
+        ]
       },
-      "supports_since": true
-    },
-    "add_namespaces": false
-  }
-]
+      "type": "dtl"
+    }
+  ],
+  "type": "pipe"
+}

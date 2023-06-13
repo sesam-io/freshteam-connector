@@ -1,35 +1,92 @@
 {
   "_id": "{{@ system @}}",
-  "type": "system:rest",
   "headers": {
     "Authorization": "Bearer $SECRET(api_key)",
     "accept": "application/json"
   },
   "operations": {
-    "delete": {
-      "method": "DELETE",
-      "url": "{{ properties.type }}/{{ properties.id }}"
-    },
-    "get": {
+    "branch-list": {
       "id_expression": "{{ id }}",
       "method": "GET",
-      "next_page_link": "{{ body.paging.next.link }}",
+      "next_page_link": "{{ headers.link.next }}",
+      "url": "branches"
+    },
+    "business-unit-list": {
+      "id_expression": "{{ id }}",
+      "method": "GET",
+      "next_page_link": "{{ headers.link.next }}",
+      "url": "business_units"
+    },
+    "department-list": {
+      "id_expression": "{{ id }}",
+      "method": "GET",
+      "next_page_link": "{{ headers.link.next }}",
+      "url": "departments"
+    },
+    "employee-delete": {
+      "method": "DELETE",
+      "payload-type": "json",
+      "url": "employees/{{ entity.id }}"
+    },
+    "employee-insert": {
+      "method": "POST",
+      "payload-type": "json",
+      "url": "employees"
+    },
+    "employee-list": {
+      "id_expression": "{{ id }}",
+      "method": "GET",
+      "next_page_link": "{{ headers.link.next }}",
+      "params": {
+        "sort": "updated_at",
+        "sort_type": "asc"
+      },
       "since_property_location": "query",
       "since_property_name": "updated_since",
       "updated_expression": "{{ updated_at }}",
-      "url": "{{ properties.url }}"
+      "url": "employees"
     },
-    "insert": {
-      "method": "POST",
-      "payload-type": "json",
-      "url": "{{ properties.url }}?"
+    "employee-lookup": {
+      "method": "GET",
+      "url": "employees/{{ entity.id }}"
     },
-    "update": {
+    "employee-update": {
       "method": "PUT",
       "payload-type": "json",
-      "url": "{{ properties.url }}"
+      "url": "employees/{{ entity.id }}"
+    },
+    "level-list": {
+      "id_expression": "{{ id }}",
+      "method": "GET",
+      "next_page_link": "{{ headers.link.next }}",
+      "url": "levels"
+    },
+    "roles-list": {
+      "id_expression": "{{ id }}",
+      "method": "GET",
+      "next_page_link": "{{ headers.link.next }}",
+      "url": "roles"
+    },
+    "sub-department-list": {
+      "id_expression": "{{ id }}",
+      "method": "GET",
+      "next_page_link": "{{ headers.link.next }}",
+      "url": "sub_departments"
+    },
+    "team-list": {
+      "id_expression": "{{ id }}",
+      "method": "GET",
+      "next_page_link": "{{ headers.link.next }}",
+      "url": "teams"
+    },
+    "time-off-list": {
+      "id_expression": "{{ id }}",
+      "method": "GET",
+      "next_page_link": "{{ headers.link.next }}",
+      "url": "time_offs"
     }
   },
-  "url_pattern": "https://{{@ account_id @}}.freshteam.com/api/%s",
+  "type": "system:rest",
+  "url_pattern": "{{@ base_url @}}/api/%s",
   "verify_ssl": true
 }
