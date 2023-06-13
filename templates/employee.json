@@ -19,7 +19,6 @@
       {
         "properties": {
           "primary_key": "id",
-          "rest_system": "{{@ system @}}",
           "share_dataset": "{{@ system @}}-{{@ datatype @}}-share"
         },
         "template": "transform-collect-rest",
