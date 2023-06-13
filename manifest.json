@@ -25,12 +25,20 @@
       "label": "Level",
       "template": "templates/branch.json"
     },
+    "roles": {
+      "label": "Level",
+      "template": "templates/branch.json"
+    },
     "sub-department": {
       "label": "Sub-department",
       "template": "templates/branch.json"
     },
     "team": {
       "label": "Team",
+      "template": "templates/branch.json"
+    },
+    "time-off": {
+      "label": "Time off",
       "template": "templates/branch.json"
     }
   },

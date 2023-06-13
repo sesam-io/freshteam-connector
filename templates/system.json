@@ -8,28 +8,19 @@
     "branch-list": {
       "id_expression": "{{ id }}",
       "method": "GET",
-      "next_page_link": "{{ body.paging.next.link }}",
-      "since_property_location": "query",
-      "since_property_name": "updated_since",
-      "updated_expression": "{{ updated_at }}",
+      "next_page_link": "{{ headers.link.next }}",
       "url": "branches"
     },
     "business-unit-list": {
       "id_expression": "{{ id }}",
       "method": "GET",
-      "next_page_link": "{{ body.paging.next.link }}",
-      "since_property_location": "query",
-      "since_property_name": "updated_since",
-      "updated_expression": "{{ updated_at }}",
+      "next_page_link": "{{ headers.link.next }}",
       "url": "business_units"
     },
     "department-list": {
       "id_expression": "{{ id }}",
       "method": "GET",
-      "next_page_link": "{{ body.paging.next.link }}",
-      "since_property_location": "query",
-      "since_property_name": "updated_since",
-      "updated_expression": "{{ updated_at }}",
+      "next_page_link": "{{ headers.link.next }}",
       "url": "departments"
     },
     "employee-delete": {
@@ -45,7 +36,7 @@
     "employee-list": {
       "id_expression": "{{ id }}",
       "method": "GET",
-      "next_page_link": "{{ body.paging.next.link }}",
+      "next_page_link": "{{ headers.link.next }}",
       "since_property_location": "query",
       "since_property_name": "updated_since",
       "updated_expression": "{{ updated_at }}",
@@ -63,29 +54,32 @@
     "level-list": {
       "id_expression": "{{ id }}",
       "method": "GET",
-      "next_page_link": "{{ body.paging.next.link }}",
-      "since_property_location": "query",
-      "since_property_name": "updated_since",
-      "updated_expression": "{{ updated_at }}",
+      "next_page_link": "{{ headers.link.next }}",
       "url": "levels"
+    },
+    "roles-list": {
+      "id_expression": "{{ id }}",
+      "method": "GET",
+      "next_page_link": "{{ headers.link.next }}",
+      "url": "roles"
     },
     "sub-department-list": {
       "id_expression": "{{ id }}",
       "method": "GET",
-      "next_page_link": "{{ body.paging.next.link }}",
-      "since_property_location": "query",
-      "since_property_name": "updated_since",
-      "updated_expression": "{{ updated_at }}",
+      "next_page_link": "{{ headers.link.next }}",
       "url": "sub_departments"
     },
     "team-list": {
       "id_expression": "{{ id }}",
       "method": "GET",
-      "next_page_link": "{{ body.paging.next.link }}",
-      "since_property_location": "query",
-      "since_property_name": "updated_since",
-      "updated_expression": "{{ updated_at }}",
+      "next_page_link": "{{ headers.link.next }}",
       "url": "teams"
+    },
+    "time-off-list": {
+      "id_expression": "{{ id }}",
+      "method": "GET",
+      "next_page_link": "{{ headers.link.next }}",
+      "url": "time_offs"
     }
   },
   "type": "system:rest",

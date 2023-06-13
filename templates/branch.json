@@ -6,7 +6,7 @@
   },
   "source": {
     "operation": "{{@ datatype @}}-list",
-    "supports_since": true,
+    "supports_since": false,
     "system": "{{@ system @}}",
     "type": "rest"
   },

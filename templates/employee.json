@@ -12,6 +12,7 @@
       "operation": "{{@ datatype @}}-list",
       "supports_since": true,
       "system": "{{@ system @}}",
+      "trace": {},
       "type": "rest"
     },
     "transform": [
