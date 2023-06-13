@@ -37,6 +37,10 @@
       "id_expression": "{{ id }}",
       "method": "GET",
       "next_page_link": "{{ headers.link.next }}",
+      "params": {
+        "sort": "updated_at",
+        "sort_type": "asc"
+      },
       "since_property_location": "query",
       "since_property_name": "updated_since",
       "updated_expression": "{{ updated_at }}",
