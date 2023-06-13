@@ -38,6 +38,23 @@
                 "datetime",
                 "_S.updated_at"
               ]
+            ],
+            [
+              "comment",
+              "When an {{@ datatype @}} is deleted in Freshteam the 'deleted' property gets set to true, so if that happens we must set the _deleted to true also."
+            ],
+            [
+              "if",
+              [
+                "eq",
+                "_S.deleted",
+                true
+              ],
+              [
+                "add",
+                "_deleted",
+                true
+              ]
             ]
           ]
         },

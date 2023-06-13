@@ -25,6 +25,23 @@
               "datetime",
               "_S.updated_at"
             ]
+          ],
+          [
+            "comment",
+            "When an object is deleted in Freshteam the object can still appear in the api, but with the 'deleted' property set to true. If that happens we must set the _deleted to true also."
+          ],
+          [
+            "if",
+            [
+              "eq",
+              "_S.deleted",
+              true
+            ],
+            [
+              "add",
+              "_deleted",
+              true
+            ]
           ]
         ]
       },
