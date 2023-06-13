@@ -18,9 +18,6 @@
     "transform": [
       {
         "properties": {
-          "operation_lookup": "{{@ datatype @}}-lookup",
-          "operation_lookup_properties": {},
-          "original_property": "_original",
           "primary_key": "id",
           "rest_system": "{{@ system @}}",
           "share_dataset": "{{@ system @}}-{{@ datatype @}}-share"
