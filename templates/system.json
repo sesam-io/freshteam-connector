@@ -48,6 +48,9 @@
     },
     "employee-lookup": {
       "method": "GET",
+      "params": {
+        "include": "roles"
+      },
       "url": "employees/{{ entity.id }}"
     },
     "employee-update": {
