@@ -42,5 +42,6 @@
       "template": "templates/branch.json"
     }
   },
+  "system": "Freshteam",
   "system-template": "templates/system.json"
 }

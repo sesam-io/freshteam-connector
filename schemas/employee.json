@@ -1,0 +1,494 @@
+{
+  "$id": "/api/pipes/xxxxxx-employee-collect/entity-types/sink",
+  "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": true,
+  "properties": {
+    "actual_retirement_date": {
+      "description": "Actual date when the employee retires, specified in the YYYY-MM-DD format.",
+      "type": "string"
+    },
+    "address": {
+      "additionalProperties": true,
+      "properties": {
+        "city": {
+          "description": "City, district, town, or any other similar component of the employee\u2019s residential address.\nMinimum length: 2 characters\nMaximum length: 128 characters",
+          "type": "string"
+        },
+        "country": {
+          "description": "Country name or code.\nMinimum length: 2 characters\nMaximum length: 128 characters",
+          "type": "string"
+        },
+        "state": {
+          "description": "State, region, province, county, or any other sub component of the employee\u2019s residential address.\nMinimum length: 2 characters\nMaximum length: 128 characters",
+          "type": "string"
+        },
+        "street": {
+          "description": "Street name, PO Box number, apartment complex, building identifier, or any other similar component of the employee\u2019s residential address.\nMinimum length: 2 characters\nMaximum length: 128 characters",
+          "type": "string"
+        },
+        "zip_code": {
+          "description": "ZIP or postal code.\nMinimum length: 2 characters\nMaximum length: 128 characters",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "avatar_url": {
+      "description": "Location of the image file that is used to populate the avatar of the employee, in the employee\u2019s personal information page.",
+      "type": "string"
+    },
+    "blood_group": {
+      "description": "Blood group of the employee.\nPossible values:\u00a0A\u2212,\u00a0B\u2212,\u00a0O\u2212,\u00a0B+,\u00a0O+,\u00a0A+,\u00a0A1+,\u00a0A1B-,\u00a0AB+,\u00a0AB-,\u00a0A1B+,\u00a0A2+,\u00a0A2B-,\u00a0A2B+,\u00a0A1-",
+      "type": "string"
+    },
+    "branch_id": {
+      "description": "Identifier of the branch to which the employee belongs. This is the\u00a0branch.id\u00a0value that is auto-generated when the branch\u2019s information is configured in Freshteam.",
+      "type": "string"
+    },
+    "business_unit_id": {
+      "description": "Identifier of the business function to which the employee belongs. This is the\u00a0business unit.id\u00a0value that is auto-generated when the business unit\u2019s information is configured in Freshteam.",
+      "type": "string"
+    },
+    "citizenship_status_id": {
+      "description": "Identifier of the employee\u2019s citizenship status. This is the\u00a0field option.id\u00a0value that is auto-generated when the citizenship status is configured in Freshteam.",
+      "type": "string"
+    },
+    "communication_address": {
+      "additionalProperties": true,
+      "properties": {
+        "communication_city": {
+          "type": "string"
+        },
+        "communication_country": {
+          "type": "string"
+        },
+        "communication_state": {
+          "type": "string"
+        },
+        "communication_street": {
+          "description": "The communication_address.* fields specify the address to which all official communication is sent.",
+          "type": "string"
+        },
+        "communication_zip_code": {
+          "type": "string"
+        },
+        "same_as_residential": {
+          "description": "The attribute is part of the response object only if the attribute value is\u00a0false.",
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    },
+    "cost_center_id": {
+      "description": "Identifier of the cost center to which the employee belongs. This is the\u00a0field option.id\u00a0value that is auto-generated when the shift is configured in Freshteam.",
+      "type": "string"
+    },
+    "country_of_birth": {
+      "description": "Country where the employee was born.",
+      "type": "string"
+    },
+    "created_at": {
+      "description": "Timestamp of when the employee information is created, specified in the date-time format. The timestamp is returned as part of the response employee object, on successful processing of an employee create request.",
+      "type": "string"
+    },
+    "date_of_birth": {
+      "description": "Birth date of the employee.",
+      "type": "string"
+    },
+    "deleted": {
+      "description": "If\u00a0true, specifies that the employee is no longer part of the organization and the employee record is deleted from the Freshteam system.\nPossible values:\u00a0true,\u00a0false",
+      "type": "boolean"
+    },
+    "department_id": {
+      "description": "Identifier of the department (job role) to which the employee belongs. This is the\u00a0department.id\u00a0value that is auto-generated when the department\u2019s information is configured in Freshteam.",
+      "type": "string"
+    },
+    "designation": {
+      "description": "Job title of the employee.",
+      "type": "string"
+    },
+    "draft": {
+      "description": "If\u00a0true, specifies that the employee is a current employee of the organization and the employee\u2019s record is being drafted.\nPosbsible values:\u00a0true,\u00a0false",
+      "type": "boolean"
+    },
+    "eeo_company_code": {
+      "description": "EEO company code that the EEO commission assigns to an organization.",
+      "type": "string"
+    },
+    "eeo_disabled": {
+      "description": "Specifies whether the employee is recruited based on the EEO policy of the organization that enables employing people with disabilities.\nPossible values:\u00a0Yes,\u00a0No,\u00a0I don\u2019t wish to answer",
+      "type": "string"
+    },
+    "eeo_ethnicity": {
+      "description": "Ethnicity of the employee who is recruited based on the EEO policy of the organization.\nPossible values:\nAmerican Indian or Alaska Native (Not Hispanic or Latino)\nAsian or Indian Subcontinent (Not Hispanic or Latino)\nBlack or African American (Not Hispanic or Latino)\nHispanic or Latino\nNative Hawaiian or Other Pacific Islander (Not Hispanic or Latino)\nTwo or More Races (Not Hispanic or Latino)\nWhite (Not Hispanic or Latino)\nI don\u2019t wish to answer",
+      "type": "string"
+    },
+    "eeo_job_category": {
+      "description": "EEO job class under which the employee is recruited.\nPossible values:\nExecutive/Senior Level Managers\nFirst/Mid Level Managers\nProfessionals\nTechnicians\nSales Workers\nAdministrative/Support Workers\nCraft Workers\nOperatives\nLaborers and Helpers\nService Workers",
+      "type": "string"
+    },
+    "eeo_veteran": {
+      "description": "Type of veteran recruited based on the Equal Employment Opportunity (EEO) policy of an organization that enables employing veterans from armed forces.\nPossible values:\nProtected veteran: Employee has served in active duty in the armed forces.\nUnprotected veteran: Employee has not served in active duty but was involved in a campaign.\nI don\u2019t wish to answer",
+      "type": "string"
+    },
+    "emergency_contacts": {
+      "items": {
+        "additionalProperties": true,
+        "properties": {
+          "address": {
+            "description": "Address of person be contacted if there is an emergency situation.",
+            "type": "string"
+          },
+          "contact_number": {
+            "description": "Phone number of person be contacted if there is an emergency situation.",
+            "type": "string"
+          },
+          "name": {
+            "description": "Name of person be contacted if there is an emergency situation",
+            "type": "string"
+          },
+          "relationship": {
+            "description": "Relationship of person be contacted if there is an emergency situation.\u00a0Possible values:\u00a0Parent,\u00a0Father,\u00a0Mother,\u00a0Spouse,\u00a0Husband,\u00a0Wife,\u00a0Child,\u00a0Son,\u00a0Daughter,\u00a0Sibling,\u00a0Brother,\u00a0Sister",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "employee_id": {
+      "description": "Employee ID provided by the organization that uses Freshteam.",
+      "type": "string"
+    },
+    "employee_type": {
+      "description": "Employment terms that apply to the employee. For example,\u00a0Full Time,\u00a0Part Time,\u00a0Contract,\u00a0Internship,\u00a0Temporary,\u00a0Seasonal,\u00a0Volunteer, and so on.",
+      "type": "string"
+    },
+    "employment_end_date": {
+      "description": "Date by when the employee\u2019s offer of employment ceases, specified in the YYYY-MM-DD format. If a notice period is set for an organization, this value is auto-populated based on the notice period.",
+      "type": "string"
+    },
+    "end_time": {
+      "description": "In a day, the typical work ending time of the employee, set by the organization.",
+      "type": "string"
+    },
+    "expected_retirement_date": {
+      "description": "Date by when the employee is expected to retire, specified in the YYYY-MM-DD format.",
+      "type": "string"
+    },
+    "first_name": {
+      "description": "Business name of the employee.",
+      "type": "string"
+    },
+    "flsa_required": {
+      "description": "Specifies whether the employee requires legal protection under the Fair Labour Standards Act (FLSA).\nPossible values:\u00a0true,\u00a0false",
+      "type": "boolean"
+    },
+    "gender": {
+      "description": "Gender of the employee.\nPossible values:\u00a0male,\u00a0female",
+      "type": "string"
+    },
+    "hereditary_last_name": {
+      "description": "Family name part of the employee\u2019s surname, if the employee has a composite surname.",
+      "type": "string"
+    },
+    "hire_reason": {
+      "description": "Reason the interview panel provides for hiring the employee.",
+      "type": "string"
+    },
+    "hr_incharge_id": {
+      "description": "Identifier of the person assigned as the HR incharge of the employee. This is the\u00a0employee.id\u00a0value that is auto-generated when the HR incharge's employee record is stored in Freshteam.",
+      "type": "string"
+    },
+    "id": {
+      "description": "Identifier of the employee object, auto-generated when an employee\u2019s information is saved. A successful create employee request, returns this attribute as part of the response object. Further API requests can use the returned value to identify an employee and update the employee information.",
+      "type": "number"
+    },
+    "id_card_details": {
+      "description": "Number or code associated with the ID card provided to the employee.",
+      "type": "string"
+    },
+    "im_address": {
+      "description": "Official instant messenger address of the employee.",
+      "type": "string"
+    },
+    "job_code": {
+      "description": "Job code of the employee, as specified in FLSA.",
+      "type": "string"
+    },
+    "job_exempt": {
+      "description": "Specifies whether the job for which the employee is recruited is exempted from protection offered by FLSA.\nPossible values:\u00a0Exempted,\u00a0Not exempted",
+      "type": "boolean"
+    },
+    "joining_date": {
+      "description": "Date when the employee joins the organization, specified in the date format.",
+      "type": "string"
+    },
+    "last_name": {
+      "description": "Last name of the employee.",
+      "type": "string"
+    },
+    "legal_name": {
+      "description": "Registered name of the employee.",
+      "type": "string"
+    },
+    "level_id": {
+      "description": "Identifier of the job band to which the employee belongs. Must be a valid level.id value.",
+      "type": "integer"
+    },
+    "marital_status": {
+      "description": "Marital status of the employee.\nPossible values:\u00a0single,\u00a0married",
+      "type": "string"
+    },
+    "middle_name": {
+      "description": "Middle name of the employee.",
+      "type": "string"
+    },
+    "nick_name": {
+      "description": "Alternate display name for the employee, in the Freshteam system.",
+      "type": "string"
+    },
+    "notice_end_date": {
+      "description": "Ending date of the notice period, updated after the employee\u2019s termination is approved.",
+      "type": "string"
+    },
+    "notice_period": {
+      "description": "Duration the employee has to serve as notice period.",
+      "type": "string"
+    },
+    "notice_start_date": {
+      "description": "Starting date of the notice period, updated after the employee\u2019s termination is approved.",
+      "type": "string"
+    },
+    "official_email": {
+      "description": "Official email address of the employee.",
+      "type": "string"
+    },
+    "original_hire_date": {
+      "description": "Date when the employee\u2019s hiring is finalized and offer of employment rolled out, specified in the YYYY-MM-DD format.",
+      "type": "string"
+    },
+    "pending_role": {
+      "type": null
+    },
+    "personal_email": {
+      "description": "Personal email address of the employee.",
+      "type": "string"
+    },
+    "phone_numbers": {
+      "additionalProperties": true,
+      "properties": {
+        "name": {
+          "description": "Type of phone number.\nPossible values (enum): Home, Main, Mobile, Others",
+          "type": "string"
+        },
+        "number": {
+          "description": "Personal contact number of the employee.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "place_of_birth": {
+      "description": "City where the employee was born.",
+      "type": "string"
+    },
+    "previous_exit_date": {
+      "description": "Date when the employee\u2019s offer of employment ceased, in the employee\u2019s previous stint with the organization, specified in the YYYY-MM-DD format.",
+      "type": "string"
+    },
+    "previous_joining_date": {
+      "description": "Date when the employee started services, in the employee\u2019s previous stint with the organization, specified in the YYYY-MM-DD format.",
+      "type": "string"
+    },
+    "previous_name": {
+      "description": "Previous name of the employee, if the employee has changed the official name.",
+      "type": "string"
+    },
+    "previous_name_change_date": {
+      "description": "Date from when the employee\u2019s new name is official, as per the legal records.",
+      "type": "string"
+    },
+    "probation_end_date": {
+      "description": "Date when the employee\u2019s probation period ends, specified in the YYYY-MM-DD format.",
+      "type": "string"
+    },
+    "probation_start_date": {
+      "description": "Date when the employee\u2019s probation period starts, specified in the YYYY-MM-DD format.",
+      "type": "string"
+    },
+    "rehire_eligibility": {
+      "description": "Specifies whether the employee, whose services have ended, is eligible to be hired in the future.",
+      "type": "boolean"
+    },
+    "rehire_status": {
+      "description": "Specifies whether the employee is a rehire in the organization.",
+      "type": "boolean"
+    },
+    "reporting_to_id": {
+      "description": "Identifier of the person assigned as the reporting manager of the employee. This is the\u00a0employee.id\u00a0value that is auto-generated when the reporting manager\u2019s employee record is stored in Freshteam.",
+      "type": "string"
+    },
+    "retirement_eligibility_date": {
+      "description": "Date after which the employee is eligible to opt for retirement, specified in the YYYY-MM-DD format.",
+      "type": "string"
+    },
+    "retirement_status_id": {
+      "description": "Identifier of the retirement status associated with the employee. This is the\u00a0field option.id\u00a0value that is auto-generated when the retirement status is configured in Freshteam.",
+      "type": "string"
+    },
+    "roles": {
+      "items": {
+        "additionalProperties": true,
+        "properties": {
+          "created_at": {
+            "description": "Timestamp of when the role is created, specified in the date-time format.",
+            "type": "string"
+          },
+          "default": {
+            "description": "Specifies whether a role is a default role in the Freshteam system or a custom role configured by the organization that uses Freshteam.",
+            "type": "boolean"
+          },
+          "description": {
+            "description": "Details about the role, mentioning the different privileges provided to a user with the role permission.",
+            "type": "string"
+          },
+          "id": {
+            "description": "Identifier of a role object, auto-created when a role is created in the Freshteam system.",
+            "type": "number"
+          },
+          "name": {
+            "description": "Descriptive identifier of the role. For example,\u00a0Account Admin,\u00a0Admin,\u00a0HR Partner, and so on.",
+            "type": "string"
+          },
+          "updated_at": {
+            "description": "Timestamp of when the role details are last updated, specified in the date-time format.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "scheduled_weekly_hours": {
+      "description": "Number of hours scheduled for the employee\u2019s job position. If weekly hours are scheduled for a position, all work beyond the scheduled hours is considered for over-time.",
+      "type": "integer"
+    },
+    "secondary_business_email": {
+      "description": "Alternate work contact information for the employee.",
+      "type": "string"
+    },
+    "secondary_last_name": {
+      "description": "Second surname of the employee, if the employee has a composite surname.",
+      "type": "string"
+    },
+    "shift_id": {
+      "description": "Identifier of the shift to which the employee belongs. This is the\u00a0field option.id\u00a0value that is auto-generated when the shift is configured in Freshteam.",
+      "type": "string"
+    },
+    "social_profiles": {
+      "items": {
+        "additionalProperties": true,
+        "properties": {
+          "name": {
+            "description": "Name of the social medium.",
+            "type": "string"
+          },
+          "url": {
+            "description": "Link to the employee's social medium handle.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "start_time": {
+      "description": "In a day, the typical work starting time of the employee, set by the organization.",
+      "type": "string"
+    },
+    "status": {
+      "description": "Employment status of an employee.\nPossible values:\nactive: Current employee, records are active and saved.\ninactive: Employee is in a long leave of absence, records are archived.",
+      "type": "string"
+    },
+    "sub_department_id": {
+      "description": "Identifier of the subcategory of the job role to which the employee belongs. This is the\u00a0sub_department.id value that is auto-generated when the sub-department\u2019s information is configured in Freshteam.",
+      "type": "string"
+    },
+    "team_id": {
+      "description": "Identifier of the primary work group to which the employee belongs. This is the\u00a0team.id\u00a0value that is auto-generated when the team\u2019s information is configured in Freshteam.",
+      "type": "string"
+    },
+    "terminated": {
+      "description": "If\u00a0true, specifies that the employee is no longer part of the organization and the employee record is archived.\nPossible values:\u00a0true,\u00a0false",
+      "type": "boolean"
+    },
+    "termination_category_id": {
+      "description": "Identifier of the termination category under which the employee ceases to work for the organization. This is the (field option).id value that is auto-generated when the termination category is configured in Freshteam.",
+      "type": "string"
+    },
+    "termination_date": {
+      "description": "Date when the employee leaves the organization, specified in the YYYY-MM-DD format.",
+      "type": "string"
+    },
+    "termination_reason": {
+      "description": "Reason stating why the employee leaves the organization, specified by the person who updates the employee record.",
+      "type": "string"
+    },
+    "updated_at": {
+      "description": "Timestamp of when the employee information is last updated, specified in the date-time format. The timestamp is returned as part of the response employee object, on successful processing of an employee create request. If an employee\u2019s details are not updated, the updated_at and created_at values are same.",
+      "type": "string"
+    },
+    "user_academic_suffix_id": {
+      "description": "Identifier of the academic qualification, which can be specified as a suffix, associated with the employee. This is the\u00a0field option.id\u00a0value that is auto-generated when the academic suffix is configured in Freshteam.",
+      "type": "string"
+    },
+    "user_category": {
+      "description": "Category under which the new hire’s record qualifies to exist in Freshteam. For example, onboarding.",
+      "type": "string"
+    },
+    "user_honorary_suffix_id": {
+      "description": "Identifier of the honorary title bestowed to the employee. This is the\u00a0field option.id\u00a0value that is auto-generated when the honorary suffix is configured in Freshteam.",
+      "type": "string"
+    },
+    "user_professional_suffix_id": {
+      "description": "Identifier of the professional suffix associated with the employee. This is the\u00a0field option.id\u00a0value that is auto-generated when the professional suffix is configured in Freshteam.",
+      "type": "string"
+    },
+    "user_suffix_name_id": {
+      "description": "Identifier of the name suffix associated with the employee. This is the\u00a0field option.id value that is auto-generated when the name suffix is configured in Freshteam.",
+      "type": "string"
+    },
+    "user_title_id": {
+      "description": "Identifier of the title associated with the employee. This is the\u00a0field option.id\u00a0value that is auto-generated when the title is configured in Freshteam.",
+      "type": "string"
+    },
+    "work_hours": {
+      "description": "Number of hours the employee is expected to work.",
+      "type": "integer"
+    },
+    "work_numbers": {
+      "items": {
+        "additionalProperties": true,
+        "properties": {
+          "name": {
+            "description": "The name of the phone number (\u201cWork\u201d, \u201cOthers\u201d, etc)",
+            "type": "string"
+          },
+          "number": {
+            "description": "The phonenumber itself.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "workstation_number": {
+      "description": "Work desk number of the employee.",
+      "type": "string"
+    }
+  },
+  "title": "Pipe sink entity type: xxxxxx-employee-collect",
+  "type": "object"
+}

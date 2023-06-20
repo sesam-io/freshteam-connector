@@ -1,0 +1,41 @@
+{
+  "$id": "/api/pipes/xxxxxx-roles-collect/entity-types/sink",
+  "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": true,
+  "properties": {
+    "$last-modified": {
+      "subtype": "nanoseconds",
+      "type": "string"
+    },
+    "created_at": {
+      "description": "Timestamp of when the role is created, specified in the date-time format.",
+      "type": "string"
+    },
+    "default": {
+      "description": "Specifies whether a role is a default role in the Freshteam system or a custom role configured by the organization that uses Freshteam.\nPossible values:\u00a0true,\u00a0false",
+      "type": "boolean"
+    },
+    "description": {
+      "description": "Details about the role, mentioning the different privileges provided to a user with the role permission.",
+      "type": "string"
+    },
+    "id": {
+      "description": "Identifier of a role object, auto-created when a role is created in the Freshteam system.",
+      "type": "number"
+    },
+    "name": {
+      "description": "Descriptive identifier of the role. For example,\u00a0Account Admin,\u00a0Admin,\u00a0HR Partner, and so on.",
+      "type": "string"
+    },
+    "sensitive": {
+      "description": "Knutj comment: Not sure what this attribute is about. It is not documented, and is \u2018true\u2019 for all the roles in our test-data at https://sesam.freshteam.com/.",
+      "type": "boolean"
+    },
+    "updated_at": {
+      "description": "Timestamp of when the role details are last updated, specified in the date-time format.",
+      "type": "string"
+    }
+  },
+  "title": "Pipe sink entity type: xxxxxx-roles-collect",
+  "type": "object"
+}

@@ -1,0 +1,69 @@
+{
+  "$id": "/api/pipes/xxxxxx-branch-collect/entity-types/sink",
+  "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": true,
+  "properties": {
+    "city": {
+      "description": "City in which the branch is located.",
+      "type": "string"
+    },
+    "country_code": {
+      "description": "Country in which the branch is located, specified as a character code.",
+      "type": "string"
+    },
+    "created_at": {
+      "description": "Timestamp of when the branch is created for an organization, specified in the date-time format.",
+      "type": "string"
+    },
+    "currency": {
+      "description": "Three-character valid ISO currency code.",
+      "type": "string"
+    },
+    "date_format": {
+      "description": "Accepted date format at the region where the branch is located.\nPossible values:\u00a0MonthFirst\u00a0(specifies that the accepted format is MM-DD-YYYY),\u00a0DateFirst\u00a0(specifies that the accepted format is DD-MM-YYYY)",
+      "type": "string"
+    },
+    "deleted": {
+      "description": "Specifies whether the branch is still a valid location. An organization can relocate or consolidate branches, in which case the existing branch information is deleted from the Freshteam account but the branch details can still exist in the system as historical data. For such deleted branches, the deleted attribute is set as\u00a0true.\nPossible values:\u00a0true,\u00a0false",
+      "type": "boolean"
+    },
+    "id": {
+      "description": "Identifier of the branch object, auto-generated when a new branch is configured in the Freshteam system.",
+      "type": "number"
+    },
+    "language": {
+      "description": "Primary language at the branch location.",
+      "type": "string"
+    },
+    "main_office": {
+      "description": "Specifies whether the branch is the main office at a location.\nPossible values:\u00a0true,false",
+      "type": "boolean"
+    },
+    "name": {
+      "description": "Descriptive identifier of the branch.",
+      "type": "string"
+    },
+    "state": {
+      "description": "Province in which the branch is located.",
+      "type": "string"
+    },
+    "street": {
+      "description": "Address parameter of the branch.",
+      "type": "string"
+    },
+    "time_zone": {
+      "description": "Time-zone applicable to the branch location.",
+      "type": "string"
+    },
+    "updated_at": {
+      "description": "Timestamp of when the branch details are last modified, specified in the date-time format.",
+      "type": "string"
+    },
+    "zip": {
+      "description": "Postal code of the region where the branch is located.",
+      "type": "string"
+    }
+  },
+  "title": "Pipe sink entity type: xxxxxx-branch-collect",
+  "type": "object"
+}

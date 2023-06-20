@@ -1,0 +1,88 @@
+{
+  "$id": "/api/pipes/xxxxxx-time-off-collect/entity-types/sink",
+  "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": true,
+  "properties": {
+    "$last-modified": {
+      "subtype": "nanoseconds",
+      "type": "string"
+    },
+    "applied_by_id": {
+      "description": "Identifier of the employee who raises the time-off request.",
+      "type": "integer"
+    },
+    "approved_by_id": {
+      "description": "Identifier of the employee who approves the time-off request. Must be a valid employee.id value.",
+      "type": "integer"
+    },
+    "cancelled_at": {
+      "description": "Timestamp of when the employee cancels the time-off request.",
+      "type": "string"
+    },
+    "cancelled_by_id": {
+      "description": "Identifier of the employee who cancels the time-off request. Same as applied_by_id, if the time_off.status is\u00a0cancelled.",
+      "type": "integer"
+    },
+    "cancelled_due_to_exit": {
+      "description": "Specifies whether the time-off request is cancelled due to the off-boarding process of the employee.",
+      "type": "boolean"
+    },
+    "comments": {
+      "description": "Reason quoted by the employee for the time-off request.",
+      "type": "string"
+    },
+    "created_at": {
+      "description": "Timestamp of when the time-off request is created, specified in the date-time format.",
+      "type": "string"
+    },
+    "end_date": {
+      "description": "Ending date of the employee\u2019s absence.",
+      "type": "string"
+    },
+    "id": {
+      "description": "Identifier of the timeoff object, auto-generated when a time-off request is saved.",
+      "type": "number"
+    },
+    "leave_type_id": {
+      "description": "Identifier the time-off type under which the time-off request is raised. Must be a valid time_off_type.id value",
+      "type": "integer"
+    },
+    "leave_units": {
+      "description": "Number of days of time-off applied through the time-off request, auto-generated considering the organization\u2019s work and holiday calendars and the time-off request\u2019s start_date and end_date.",
+      "type": "integer"
+    },
+    "optional_leave_units": {
+      "description": "Number of days of optional holidays that falls within the time-off request period.",
+      "type": "integer"
+    },
+    "rejected_at": {
+      "description": "Timestamp of when the reporting manager or HR partner declines the time-off request.",
+      "type": "string"
+    },
+    "rejected_by_id": {
+      "description": "Identifier of the employee who declines the time-off request.",
+      "type": "integer"
+    },
+    "start_date": {
+      "description": "Starting date of the employee\u2019s absence.",
+      "type": "string"
+    },
+    "status": {
+      "description": "Status of the time-off request.\nPossible values\u00a0(enum):\u00a0pending,\u00a0approved,\u00a0declined,\u00a0cancelled",
+      "type": "string"
+    },
+    "status_comments": {
+      "description": "Reason for declining or cancelling the time-off request.",
+      "type": "string"
+    },
+    "updated_at": {
+      "description": "Timestamp of when the time-off request details are last updated, specified in the date-time format.",
+      "type": "string"
+    },
+    "user_id": {
+      "type": "integer"
+    }
+  },
+  "title": "Pipe sink entity type: xxxxxx-time-off-collect",
+  "type": "object"
+}

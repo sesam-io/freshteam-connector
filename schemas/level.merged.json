@@ -1,0 +1,33 @@
+{
+  "$id": "/api/pipes/xxxxxx-level-collect/entity-types/sink",
+  "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": true,
+  "properties": {
+    "$last-modified": {
+      "subtype": "nanoseconds",
+      "type": "string"
+    },
+    "created_at": {
+      "description": "Timestamp of when the level is created, specified in the date-time format.",
+      "type": "string"
+    },
+    "deleted": {
+      "description": "Specifies whether the level is still a valid hierarchy in the organization. An organization can merge levels or form new levels, in which case, the existing level is deleted from the Freshteam account but the level details can still exist in the system as historical data. For such deleted levels, the deleted attribute value is set to\u00a0true.\nPossible values:\u00a0true,\u00a0false",
+      "type": "boolean"
+    },
+    "id": {
+      "description": "Identifier of a level object, auto-generated when a level is created in the Freshteam system.",
+      "type": "number"
+    },
+    "name": {
+      "description": "Descriptive identifier of the level. For example,\u00a0IC2\u00a0(Individual contributor - 2),\u00a0PM3\u00a0(Product manager -3) and so on.",
+      "type": "string"
+    },
+    "updated_at": {
+      "description": "Timestamp of when the level details are last modified, specified in the date-time format.",
+      "type": "string"
+    }
+  },
+  "title": "Pipe sink entity type: xxxxxx-level-collect",
+  "type": "object"
+}

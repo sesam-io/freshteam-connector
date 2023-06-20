@@ -1,0 +1,29 @@
+{
+  "$id": "/api/pipes/xxxxxx-team-collect/entity-types/sink",
+  "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": true,
+  "properties": {
+    "created_at": {
+      "description": "Timestamp of when the team is created, specified in the date-time format.",
+      "type": "string"
+    },
+    "deleted": {
+      "description": "Specifies whether the team is still a valid grouping in the organization. An organization can merge teams or form sub-teams, in which case the existing team is deleted from the Freshteam account but the team details can still exist in the system as historical data. For such deleted teams, the deleted attribute value is set to\u00a0true.\nPossible values:\u00a0true,\u00a0false",
+      "type": "boolean"
+    },
+    "id": {
+      "description": "Identifier of the team object, auto-generated when a team is created in the Freshteam system.",
+      "type": "number"
+    },
+    "name": {
+      "description": "Descriptive identifier of the team. For example,\u00a0Corporate Marketing,\u00a0HR Operations, and so on.",
+      "type": "string"
+    },
+    "updated_at": {
+      "description": "Timestamp of when the team name is last modified, specified in the date-time format.",
+      "type": "string"
+    }
+  },
+  "title": "Pipe sink entity type: xxxxxx-team-collect",
+  "type": "object"
+}
