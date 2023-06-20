@@ -1,0 +1,237 @@
+system,type,name,subname,datatype,description
+Freshteam,branch,id,,number,"Identifier of the branch object, auto-generated when a new branch is configured in the Freshteam system."
+Freshteam,branch,created_at,,string,"Timestamp of when the branch is created for an organization, specified in the date-time format."
+Freshteam,branch,updated_at,,string,"Timestamp of when the branch details are last modified, specified in the date-time format."
+Freshteam,branch,deleted,,boolean,"Specifies whether the branch is still a valid location. An organization can relocate or consolidate branches, in which case the existing branch information is deleted from the Freshteam account but the branch details can still exist in the system as historical data. For such deleted branches, the deleted attribute is set as true.
+Possible values: true, false"
+Freshteam,branch,name,,string,Descriptive identifier of the branch.
+Freshteam,branch,street,,string,Address parameter of the branch.
+Freshteam,branch,state,,string,Province in which the branch is located.
+Freshteam,branch,city,,string,City in which the branch is located.
+Freshteam,branch,country_code,,string,"Country in which the branch is located, specified as a character code."
+Freshteam,branch,zip,,string,Postal code of the region where the branch is located.
+Freshteam,branch,time_zone,,string,Time-zone applicable to the branch location.
+Freshteam,branch,currency,,string,Three-character valid ISO currency code.
+Freshteam,branch,language,,string,Primary language at the branch location.
+Freshteam,branch,main_office,,boolean,"Specifies whether the branch is the main office at a location.
+Possible values: true,false"
+Freshteam,branch,date_format,,string,"Accepted date format at the region where the branch is located.
+Possible values: MonthFirst (specifies that the accepted format is MM-DD-YYYY), DateFirst (specifies that the accepted format is DD-MM-YYYY)"
+Freshteam,employee,id,,number,"Identifier of the employee object, auto-generated when an employee’s information is saved. A successful create employee request, returns this attribute as part of the response object. Further API requests can use the returned value to identify an employee and update the employee information."
+Freshteam,employee,created_at,,string,"Timestamp of when the employee information is created, specified in the date-time format. The timestamp is returned as part of the response employee object, on successful processing of an employee create request."
+Freshteam,employee,updated_at,,string,"Timestamp of when the employee information is last updated, specified in the date-time format. The timestamp is returned as part of the response employee object, on successful processing of an employee create request. If an employee’s details are not updated, the updated_at and created_at values are same."
+Freshteam,employee,deleted,,boolean,"If true, specifies that the employee is no longer part of the organization and the employee record is deleted from the Freshteam system.
+Possible values: true, false"
+Freshteam,employee,work_numbers,name,string,"The name of the phone number (“Work”, “Others”, etc)"
+Freshteam,employee,work_numbers,number,string,The phonenumber itself.
+Freshteam,employee,workstation_number,,string,Work desk number of the employee.
+Freshteam,employee,nick_name,,string,"Alternate display name for the employee, in the Freshteam system."
+Freshteam,employee,date_of_birth,,string,"Birth date of the employee, specified in the date format."
+Freshteam,employee,gender,,string,"Gender of the employee.
+Possible values: male, female."
+Freshteam,employee,address.street,,string,"Street name, PO Box number, apartment complex, building identifier, or any other similar component of the employee’s residential address.
+Minimum length: 2 characters
+Maximum length: 128 characters"
+Freshteam,employee,address.city,,string,"City, district, town, or any other similar component of the employee’s residential address.
+Minimum length: 2 characters
+Maximum length: 128 characters"
+Freshteam,employee,address.state,,string,"State, region, province, county, or any other sub component of the employee’s residential address.
+Minimum length: 2 characters
+Maximum length: 128 characters"
+Freshteam,employee,address.country,,string,"Country name or code.
+Minimum length: 2 characters
+Maximum length: 128 characters"
+Freshteam,employee,address.zip_code,,string,"ZIP or postal code.
+Minimum length: 2 characters
+Maximum length: 128 characters"
+Freshteam,employee,communication_address.communication_street,,string,The communication_address.* fields specify the address to which all official communication is sent.
+Freshteam,employee,communication_address.communication_city,,string,
+Freshteam,employee,communication_address.communication_country,,string,
+Freshteam,employee,communication_address.communication_state,,string,
+Freshteam,employee,communication_address.communication_zip_code,,string,
+Freshteam,employee,communication_address.same_as_residential,,boolean,The attribute is part of the response object only if the attribute value is false.
+Freshteam,employee,designation,,string,Job title of the employee.
+Freshteam,employee,phone_numbers.name,,string,"Type of phone number.
+Possible values (enum): Home, Main, Mobile, Others"
+Freshteam,employee,phone_numbers.number,,string,Personal contact number of the employee.
+Freshteam,employee,joining_date,,string,"Date when the employee joins the organization, specified in the date format."
+Freshteam,employee,termination_date,,string,"Date when the employee leaves the organization, specified in the date format."
+Freshteam,employee,first_name,,string,Business name of the employee.
+Freshteam,employee,last_name,,string,Last name of the employee.
+Freshteam,employee,middle_name,,string,Middle name of the employee.
+Freshteam,employee,employee_id,,string,Employee ID provided by the organization that uses Freshteam.
+Freshteam,employee,status,,string,"Employment status of an employee.
+Possible values:
+active: Current employee, records are active and saved.
+inactive: Employee is in a long leave of absence, records are archived."
+Freshteam,employee,official_email,,string,Official email address of the employee.
+Freshteam,employee,personal_email,,string,Personal email address of the employee.
+Freshteam,employee,employee_type,,string,"Employment terms that apply to the employee. For example, Full Time, Part Time, Contract, Internship, Temporary, Seasonal, Volunteer, and so on."
+Freshteam,employee,draft,,boolean,"If true, specifies that the employee is a current employee of the organization and the employee’s record is being drafted.
+Posbsible values: true, false"
+Freshteam,employee,terminated,,boolean,"If true, specifies that the employee is no longer part of the organization and the employee record is archived.
+Possible values: true, false"
+Freshteam,employee,branch_id,,string,Identifier of the branch to which the employee belongs. This is the branch.id value that is auto-generated when the branch’s information is configured in Freshteam.
+Freshteam,employee,team_id,,string,Identifier of the primary work group to which the employee belongs. This is the team.id value that is auto-generated when the team’s information is configured in Freshteam.
+Freshteam,employee,department_id,,string,Identifier of the department (job role) to which the employee belongs. This is the department.id value that is auto-generated when the department’s information is configured in Freshteam.
+Freshteam,employee,business_unit_id,,string,Identifier of the business function to which the employee belongs. This is the business unit.id value that is auto-generated when the business unit’s information is configured in Freshteam.
+Freshteam,employee,sub_department_id,,string,Identifier of the subcategory of the job role to which the employee belongs. This is the sub_department.id value that is auto-generated when the sub-department’s information is configured in Freshteam.
+Freshteam,employee,reporting_to_id,,string,Identifier of the person assigned as the reporting manager of the employee. This is the employee.id value that is auto-generated when the reporting manager’s employee record is stored in Freshteam.
+Freshteam,employee,hr_incharge_id,,string,Identifier of the person assigned as the HR incharge of the employee. This is the employee.id value that is auto-generated when the HR incharge's employee record is stored in Freshteam.
+Freshteam,employee,shift_id,,string,Identifier of the shift to which the employee belongs. This is the field option.id value that is auto-generated when the shift is configured in Freshteam.
+Freshteam,employee,eeo_vetran,,string,"Type of vetran recruited based on the Equal Employment Opportunity (EEO) policy of an organization that enables employing veterans from armed forces.
+Possible values:
+Protected vetran: Employee has served in active duty in the armed forces.
+Unprotected vetran: Employee has not served in active duty but was involved in a campaign.
+I don’t wish to answer"
+Freshteam,employee,eeo_ethinicity,,string,"Ethnicity of the employee who is recruited based on the EEO policy of the organization.
+Possible values:
+American Indian or Alaska Native (Not Hispanic or Latino)
+Asian or Indian Subcontinent (Not Hispanic or Latino)
+Black or African American (Not Hispanic or Latino)
+Hispanic or Latino
+Native Hawaiian or Other Pacific Islander (Not Hispanic or Latino)
+Two or More Races (Not Hispanic or Latino)
+White (Not Hispanic or Latino)
+I don’t wish to answer"
+Freshteam,employee,eeo_disabled,,string,"Specifies whether the employee is recruited based on the EEO policy of the organization that enables employing people with disabilities.
+Possible values: Yes, No, I don’t wish to answer"
+Freshteam,employee,eeo_job_category,,string,"EEO job class under which the employee is recruited.
+Possible values:
+Executive/Senior Level Managers
+First/Mid Level Managers
+Professionals
+Technicians
+Sales Workers
+Administrative/Support Workers
+Craft Workers
+Operatives
+Laborers and Helpers
+Service Workers"
+Freshteam,employee,eeo_company_code,,string,EEO company code that the EEO commission assigns to an organization.
+Freshteam,employee,hire_reason,,string,Reason the interview panel provides for hiring the employee.
+Freshteam,employee,id_card_details,,string,Number or code associated with the ID card provided to the employee.
+Freshteam,employee,workstation_number,,string,Work desk number of the employee.
+Freshteam,employee,secondary_business_email,,string,Alternate work contact information for the employee.
+Freshteam,employee,nick_name,,string,"Alternate display name for the employee, in the Freshteam system."
+Freshteam,employee,date_of_birth,,string,Birth date of the employee.
+Freshteam,employee,marital_status,,string,"Marital status of the employee.
+Possible values: single, married"
+Freshteam,employee,gender,,string,"Gender of the employee.
+Possible values: male, female"
+Freshteam,employee,blood_group,,string,"Blood group of the employee.
+Possible values: A−, B−, O−, B+, O+, A+, A1+, A1B-, AB+, AB-, A1B+, A2+, A2B-, A2B+, A1-"
+Freshteam,employee,emergency_contacts,name,string,Name of person be contacted if there is an emergency situation
+Freshteam,employee,emergency_contacts,relationship,string,"Relationship of person be contacted if there is an emergency situation. Possible values: Parent, Father, Mother, Spouse, Husband, Wife, Child, Son, Daughter, Sibling, Brother, Sister"
+Freshteam,employee,emergency_contacts,contact_number,string,Phone number of person be contacted if there is an emergency situation.
+Freshteam,employee,emergency_contacts,address,string,Address of person be contacted if there is an emergency situation.
+,employee,social_profiles,name,string,Name of the social medium.
+Freshteam,employee,social_profiles,url,string,Link to the employee's social medium handle.
+Freshteam,employee,secondary_last_name,,string,"Second surname of the employee, if the employee has a composite surname."
+Freshteam,employee,hereditary_last_name,,string,"Family name part of the employee’s surname, if the employee has a composite surname."
+Freshteam,employee,legal_name,,string,Registered name of the employee.
+Freshteam,employee,previous_name,,string,"Previous name of the employee, if the employee has changed the official name."
+Freshteam,employee,previous_name_change_date,,string,"Date from when the employee’s new name is official, as per the legal records."
+Freshteam,employee,place_of_birth,,string,City where the employee was born.
+Freshteam,employee,im_address,,string,Official instant messenger address of the employee.
+Freshteam,employee,country_of_birth,,string,Country where the employee was born.
+Freshteam,employee,flsa_required,,boolean,"Specifies whether the employee requires legal protection under the Fair Labour Standards Act (FLSA).
+Possible values: true, false"
+Freshteam,employee,job_code,,string,"Job code of the employee, as specified in FLSA."
+Freshteam,employee,job_exempt,,boolean,"Specifies whether the job for which the employee is recruited is exempted from protection offered by FLSA.
+Possible values: Exempted, Not exempted"
+Freshteam,employee,probation_start_date,,string,"Date when the employee’s probation period starts, specified in the YYYY-MM-DD format."
+Freshteam,employee,probation_end_date,,string,"Date when the employee’s probation period ends, specified in the YYYY-MM-DD format."
+Freshteam,employee,scheduled_weekly_hours,,integer,"Number of hours scheduled for the employee’s job position. If weekly hours are scheduled for a position, all work beyond the scheduled hours is considered for over-time."
+Freshteam,employee,work_hours,,integer,Number of hours the employee is expected to work.
+Freshteam,employee,start_time,,string,"In a day, the typical work starting time of the employee, set by the organization."
+Freshteam,employee,end_time,,string,"In a day, the typical work ending time of the employee, set by the organization."
+Freshteam,employee,employment_end_date,,string,"Date by when the employee’s offer of employment ceases, specified in the YYYY-MM-DD format. If a notice period is set for an organization, this value is auto-populated based on the notice period."
+Freshteam,employee,retirement_eligibility_date,,string,"Date after which the employee is eligible to opt for retirement, specified in the YYYY-MM-DD format."
+Freshteam,employee,expected_retirement_date,,string,"Date by when the employee is expected to retire, specified in the YYYY-MM-DD format."
+Freshteam,employee,actual_retirement_date,,string,"Actual date when the employee retires, specified in the YYYY-MM-DD format."
+Freshteam,employee,termination_date,,string,"Date when the employee leaves the organization, specified in the YYYY-MM-DD format."
+Freshteam,employee,termination_reason,,string,"Reason stating why the employee leaves the organization, specified by the person who updates the employee record."
+Freshteam,employee,notice_period,,string,Duration the employee has to serve as notice period.
+Freshteam,employee,notice_start_date,,string,"Starting date of the notice period, updated after the employee’s termination is approved."
+Freshteam,employee,notice_end_date,,string,"Ending date of the notice period, updated after the employee’s termination is approved."
+Freshteam,employee,rehire_eligibility,,boolean,"Specifies whether the employee, whose services have ended, is eligible to be hired in the future."
+Freshteam,employee,rehire_status,,boolean,Specifies whether the employee is a rehire in the organization.
+Freshteam,employee,previous_joining_date,,string,"Date when the employee started services, in the employee’s previous stint with the organization, specified in the YYYY-MM-DD format."
+Freshteam,employee,previous_exit_date,,string,"Date when the employee’s offer of employment ceased, in the employee’s previous stint with the organization, specified in the YYYY-MM-DD format."
+Freshteam,employee,original_hire_date,,string,"Date when the employee’s hiring is finalized and offer of employment rolled out, specified in the YYYY-MM-DD format."
+Freshteam,employee,avatar_url,,string,"Location of the image file that is used to populate the avatar of the employee, in the employee’s personal information page."
+Freshteam,employee,cost_center_id,,string,Identifier of the cost center to which the employee belongs. This is the field option.id value that is auto-generated when the shift is configured in Freshteam.
+Freshteam,employee,user_title_id,,string,Identifier of the title associated with the employee. This is the field option.id value that is auto-generated when the title is configured in Freshteam.
+Freshteam,employee,user_suffix_name_id,,string,Identifier of the name suffix associated with the employee. This is the field option.id value that is auto-generated when the name suffix is configured in Freshteam.
+Freshteam,employee,user_honorary_suffix_id,,string,Identifier of the honorary title bestowed to the employee. This is the field option.id value that is auto-generated when the honorary suffix is configured in Freshteam.
+Freshteam,employee,user_professional_suffix_id,,string,Identifier of the professional suffix associated with the employee. This is the field option.id value that is auto-generated when the professional suffix is configured in Freshteam.
+Freshteam,employee,user_academic_suffix_id,,string,"Identifier of the academic qualification, which can be specified as a suffix, associated with the employee. This is the field option.id value that is auto-generated when the academic suffix is configured in Freshteam."
+Freshteam,employee,citizenship_status_id,,string,Identifier of the employee’s citizenship status. This is the field option.id value that is auto-generated when the citizenship status is configured in Freshteam.
+Freshteam,employee,retirement_status_id,,string,Identifier of the retirement status associated with the employee. This is the field option.id value that is auto-generated when the retirement status is configured in Freshteam.
+Freshteam,employee,termination_category_id,,string,Identifier of the termination category under which the employee ceases to work for the organization. This is the (field option).id value that is auto-generated when the termination category is configured in Freshteam.
+Freshteam,employee,roles,id,number,"Identifier of a role object, auto-created when a role is created in the Freshteam system."
+Freshteam,employee,roles,created_at,string,"Timestamp of when the role is created, specified in the date-time format."
+Freshteam,employee,roles,updated_at,string,"Timestamp of when the role details are last updated, specified in the date-time format."
+Freshteam,employee,roles,name,string,"Descriptive identifier of the role. For example, Account Admin, Admin, HR Partner, and so on."
+Freshteam,employee,roles,description,string,"Details about the role, mentioning the different privileges provided to a user with the role permission."
+Freshteam,employee,roles,default,boolean,Specifies whether a role is a default role in the Freshteam system or a custom role configured by the organization that uses Freshteam.
+Freshteam,business-unit,id,,integer,"Identifier of the business unit object, auto-generated when a new business unit is created in the Freshteam system."
+Freshteam,business-unit,created_at,,string,"Timestamp of when the business unit is created, specified in the date-time format."
+Freshteam,business-unit,updated_at,,string,"Timestamp of when the business unit’s details were last modified, specified in the date-time format."
+Freshteam,business-unit,deleted,,boolean,"Specifies whether the business unit is still a valid business function in the organization.
+Possible values: true, false"
+Freshteam,business-unit,name,,string,"Descriptive identifier of the business unit.
+Examples: Dev Ops, Web Ops, Engineering, and so on."
+Freshteam,business-unit,description,,string,Description stating what the business function entails.
+Freshteam,department,id,,number,"Identifier of the department object, auto-generated when a new department is created in the Freshteam system."
+Freshteam,department,created_at,,string,"Timestamp of when the department is created, specified in the date-time format."
+Freshteam,department,updated_at,,string,"Timestamp of when the department name was last modified, specified in the date-time format."
+Freshteam,department,deleted,,boolean,"Specifies whether the department still exists in the organization.
+Possible values: true, false"
+Freshteam,department,name,,string,Meaningful identifier of the department.
+Freshteam,level,id,,number,"Identifier of a level object, auto-generated when a level is created in the Freshteam system."
+Freshteam,level,created_at,,string,"Timestamp of when the level is created, specified in the date-time format."
+Freshteam,level,updated_at,,string,"Timestamp of when the level details are last modified, specified in the date-time format."
+Freshteam,level,deleted,,boolean,"Specifies whether the level is still a valid hierarchy in the organization. An organization can merge levels or form new levels, in which case, the existing level is deleted from the Freshteam account but the level details can still exist in the system as historical data. For such deleted levels, the deleted attribute value is set to true.
+Possible values: true, false"
+Freshteam,level,name,,string,"Descriptive identifier of the level. For example, IC2 (Individual contributor - 2), PM3 (Product manager -3) and so on."
+Freshteam,roles,id,,number,"Identifier of a role object, auto-created when a role is created in the Freshteam system."
+Freshteam,roles,created_at,,string,"Timestamp of when the role is created, specified in the date-time format."
+Freshteam,roles,updated_at,,string,"Timestamp of when the role details are last updated, specified in the date-time format."
+Freshteam,roles,name,,string,"Descriptive identifier of the role. For example, Account Admin, Admin, HR Partner, and so on."
+Freshteam,roles,description,,string,"Details about the role, mentioning the different privileges provided to a user with the role permission."
+Freshteam,roles,default,,boolean,"Specifies whether a role is a default role in the Freshteam system or a custom role configured by the organization that uses Freshteam.
+Possible values: true, false"
+Freshteam,roles,sensitive,,boolean,"Knutj comment: Not sure what this attribute is about. It is not documented, and is ‘true’ for all the roles in our test-data at https://sesam.freshteam.com/."
+Freshteam,sub-department,id,,number,"Identifier of the sub-department object, auto-generated when a new sub-department is created in the Freshteam system."
+Freshteam,sub-department,created_at,,string,"Timestamp of when the sub-department is created, specified in the date-time format."
+Freshteam,sub-department,updated_at,,string,"Timestamp of when the sub-department’s name was last modified, specified in the date-time format."
+Freshteam,sub-department,deleted,,boolean,"Specifies whether the sub-department is still a valid categorization in the organization.
+Possible values: true, false"
+Freshteam,sub-department,name,,string,Descriptive identifier of the sub-department.
+Freshteam,team,id,,number,"Identifier of the team object, auto-generated when a team is created in the Freshteam system."
+Freshteam,team,created_at,,string,"Timestamp of when the team is created, specified in the date-time format."
+Freshteam,team,updated_at,,string,"Timestamp of when the team name is last modified, specified in the date-time format."
+Freshteam,team,deleted,,boolean,"Specifies whether the team is still a valid grouping in the organization. An organization can merge teams or form sub-teams, in which case the existing team is deleted from the Freshteam account but the team details can still exist in the system as historical data. For such deleted teams, the deleted attribute value is set to true.
+Possible values: true, false"
+Freshteam,team,name,,string,"Descriptive identifier of the team. For example, Corporate Marketing, HR Operations, and so on."
+Freshteam,time-off,id,,number,"Identifier of the timeoff object, auto-generated when a time-off request is saved."
+Freshteam,time-off,created_at,,string,"Timestamp of when the time-off request is created, specified in the date-time format."
+Freshteam,time-off,updated_at,,string,"Timestamp of when the time-off request details are last updated, specified in the date-time format."
+Freshteam,time-off,start_date,,string,Starting date of the employee’s absence.
+Freshteam,time-off,end_date,,string,Ending date of the employee’s absence.
+Freshteam,time-off,status,,string,"Status of the time-off request.
+Possible values (enum): pending, approved, declined, cancelled"
+Freshteam,time-off,leave_units,,integer,"Number of days of time-off applied through the time-off request, auto-generated considering the organization’s work and holiday calendars and the time-off request’s start_date and end_date."
+Freshteam,time-off,optional_leave_units,,integer,Number of days of optional holidays that falls within the time-off request period.
+Freshteam,time-off,leave_type_id,,integer,Identifier the time-off type under which the time-off request is raised. Must be a valid time_off_type.id value
+Freshteam,time-off,status_comments,,string,Reason for declining or cancelling the time-off request.
+Freshteam,time-off,approved_by_id,,integer,Identifier of the employee who approves the time-off request. Must be a valid employee.id value.
+Freshteam,time-off,applied_by_id,,integer,Identifier of the employee who raises the time-off request.
+Freshteam,time-off,cancelled_by_id,,integer,"Identifier of the employee who cancels the time-off request. Same as applied_by_id, if the time_off.status is cancelled."
+Freshteam,time-off,rejected_by_id,,integer,Identifier of the employee who declines the time-off request.
+Freshteam,time-off,comments,,string,Reason quoted by the employee for the time-off request.
+Freshteam,time-off,rejected_at,,string,Timestamp of when the reporting manager or HR partner declines the time-off request.
+Freshteam,time-off,cancelled_at,,string,Timestamp of when the employee cancels the time-off request.
+Freshteam,time-off,cancelled_due_to_exit,,boolean,Specifies whether the time-off request is cancelled due to the off-boarding process of the employee.
