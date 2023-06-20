@@ -1,0 +1,29 @@
+{
+  "$id": "/api/pipes/xxxxxx-department-collect/entity-types/sink",
+  "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": true,
+  "properties": {
+    "created_at": {
+      "description": "Timestamp of when the department is created, specified in the date-time format.",
+      "type": "string"
+    },
+    "deleted": {
+      "description": "Specifies whether the department still exists in the organization.\nPossible values:\u00a0true,\u00a0false",
+      "type": "boolean"
+    },
+    "id": {
+      "description": "Identifier of the department object, auto-generated when a new department is created in the Freshteam system.",
+      "type": "number"
+    },
+    "name": {
+      "description": "Meaningful identifier of the department.",
+      "type": "string"
+    },
+    "updated_at": {
+      "description": "Timestamp of when the department name was last modified, specified in the date-time format.",
+      "type": "string"
+    }
+  },
+  "title": "Pipe sink entity type: xxxxxx-department-collect",
+  "type": "object"
+}

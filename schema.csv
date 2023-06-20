@@ -53,16 +53,16 @@ Possible values: A−, B−, O−, B+, O+, A+, A1+, A1B-, AB+, AB-, A
 "Freshteam","employee","branch_id","","string","Identifier of the branch to which the employee belongs. This is the branch.id value that is auto-generated when the branch’s information is configured in Freshteam."
 "Freshteam","employee","business_unit_id","","string","Identifier of the business function to which the employee belongs. This is the business unit.id value that is auto-generated when the business unit’s information is configured in Freshteam."
 "Freshteam","employee","citizenship_status_id","","string","Identifier of the employee’s citizenship status. This is the field option.id value that is auto-generated when the citizenship status is configured in Freshteam."
-"Freshteam","employee","communication_address.communication_city","","string",
-"Freshteam","employee","communication_address.communication_country","","string",
-"Freshteam","employee","communication_address.communication_state","","string",
+"Freshteam","employee","communication_address.communication_city","","string",""
+"Freshteam","employee","communication_address.communication_country","","string",""
+"Freshteam","employee","communication_address.communication_state","","string",""
 "Freshteam","employee","communication_address.communication_street","","string","The communication_address.* fields specify the address to which all official communication is sent."
-"Freshteam","employee","communication_address.communication_zip_code","","string",
+"Freshteam","employee","communication_address.communication_zip_code","","string",""
 "Freshteam","employee","communication_address.same_as_residential","","boolean","The attribute is part of the response object only if the attribute value is false."
+"Freshteam","employee","confirmed","","boolean",""
 "Freshteam","employee","cost_center_id","","string","Identifier of the cost center to which the employee belongs. This is the field option.id value that is auto-generated when the shift is configured in Freshteam."
 "Freshteam","employee","country_of_birth","","string","Country where the employee was born."
 "Freshteam","employee","created_at","","string","Timestamp of when the employee information is created, specified in the date-time format. The timestamp is returned as part of the response employee object, on successful processing of an employee create request."
-"Freshteam","employee","date_of_birth","","string","Birth date of the employee, specified in the date format."
 "Freshteam","employee","date_of_birth","","string","Birth date of the employee."
 "Freshteam","employee","deleted","","boolean","If true, specifies that the employee is no longer part of the organization and the employee record is deleted from the Freshteam system.
 Possible values: true, false"
@@ -73,7 +73,7 @@ Posbsible values: true, false"
 "Freshteam","employee","eeo_company_code","","string","EEO company code that the EEO commission assigns to an organization."
 "Freshteam","employee","eeo_disabled","","string","Specifies whether the employee is recruited based on the EEO policy of the organization that enables employing people with disabilities.
 Possible values: Yes, No, I don’t wish to answer"
-"Freshteam","employee","eeo_ethinicity","","string","Ethnicity of the employee who is recruited based on the EEO policy of the organization.
+"Freshteam","employee","eeo_ethnicity","","string","Ethnicity of the employee who is recruited based on the EEO policy of the organization.
 Possible values:
 American Indian or Alaska Native (Not Hispanic or Latino)
 Asian or Indian Subcontinent (Not Hispanic or Latino)
@@ -95,10 +95,10 @@ Craft Workers
 Operatives
 Laborers and Helpers
 Service Workers"
-"Freshteam","employee","eeo_vetran","","string","Type of vetran recruited based on the Equal Employment Opportunity (EEO) policy of an organization that enables employing veterans from armed forces.
+"Freshteam","employee","eeo_veteran","","string","Type of veteran recruited based on the Equal Employment Opportunity (EEO) policy of an organization that enables employing veterans from armed forces.
 Possible values:
-Protected vetran: Employee has served in active duty in the armed forces.
-Unprotected vetran: Employee has not served in active duty but was involved in a campaign.
+Protected veteran: Employee has served in active duty in the armed forces.
+Unprotected veteran: Employee has not served in active duty but was involved in a campaign.
 I don’t wish to answer"
 "Freshteam","employee","emergency_contacts","address","string","Address of person be contacted if there is an emergency situation."
 "Freshteam","employee","emergency_contacts","contact_number","string","Phone number of person be contacted if there is an emergency situation."
@@ -113,8 +113,6 @@ I don’t wish to answer"
 "Freshteam","employee","flsa_required","","boolean","Specifies whether the employee requires legal protection under the Fair Labour Standards Act (FLSA).
 Possible values: true, false"
 "Freshteam","employee","gender","","string","Gender of the employee.
-Possible values: male, female."
-"Freshteam","employee","gender","","string","Gender of the employee.
 Possible values: male, female"
 "Freshteam","employee","hereditary_last_name","","string","Family name part of the employee’s surname, if the employee has a composite surname."
 "Freshteam","employee","hire_reason","","string","Reason the interview panel provides for hiring the employee."
@@ -128,16 +126,17 @@ Possible values: Exempted, Not exempted"
 "Freshteam","employee","joining_date","","string","Date when the employee joins the organization, specified in the date format."
 "Freshteam","employee","last_name","","string","Last name of the employee."
 "Freshteam","employee","legal_name","","string","Registered name of the employee."
+"Freshteam","employee","level_id","","integer","Identifier of the job band to which the employee belongs. Must be a valid level.id value."
 "Freshteam","employee","marital_status","","string","Marital status of the employee.
 Possible values: single, married"
 "Freshteam","employee","middle_name","","string","Middle name of the employee."
-"Freshteam","employee","nick_name","","string","Alternate display name for the employee, in the Freshteam system."
 "Freshteam","employee","nick_name","","string","Alternate display name for the employee, in the Freshteam system."
 "Freshteam","employee","notice_end_date","","string","Ending date of the notice period, updated after the employee’s termination is approved."
 "Freshteam","employee","notice_period","","string","Duration the employee has to serve as notice period."
 "Freshteam","employee","notice_start_date","","string","Starting date of the notice period, updated after the employee’s termination is approved."
 "Freshteam","employee","official_email","","string","Official email address of the employee."
 "Freshteam","employee","original_hire_date","","string","Date when the employee’s hiring is finalized and offer of employment rolled out, specified in the YYYY-MM-DD format."
+"Freshteam","employee","pending_role","","null",""
 "Freshteam","employee","personal_email","","string","Personal email address of the employee."
 "Freshteam","employee","phone_numbers.name","","string","Type of phone number.
 Possible values (enum): Home, Main, Mobile, Others"
@@ -164,6 +163,7 @@ Possible values (enum): Home, Main, Mobile, Others"
 "Freshteam","employee","secondary_business_email","","string","Alternate work contact information for the employee."
 "Freshteam","employee","secondary_last_name","","string","Second surname of the employee, if the employee has a composite surname."
 "Freshteam","employee","shift_id","","string","Identifier of the shift to which the employee belongs. This is the field option.id value that is auto-generated when the shift is configured in Freshteam."
+"Freshteam","employee","social_profiles","name","string","Name of the social medium."
 "Freshteam","employee","social_profiles","url","string","Link to the employee's social medium handle."
 "Freshteam","employee","start_time","","string","In a day, the typical work starting time of the employee, set by the organization."
 "Freshteam","employee","status","","string","Employment status of an employee.
@@ -175,11 +175,11 @@ inactive: Employee is in a long leave of absence, records are archived."
 "Freshteam","employee","terminated","","boolean","If true, specifies that the employee is no longer part of the organization and the employee record is archived.
 Possible values: true, false"
 "Freshteam","employee","termination_category_id","","string","Identifier of the termination category under which the employee ceases to work for the organization. This is the (field option).id value that is auto-generated when the termination category is configured in Freshteam."
-"Freshteam","employee","termination_date","","string","Date when the employee leaves the organization, specified in the date format."
 "Freshteam","employee","termination_date","","string","Date when the employee leaves the organization, specified in the YYYY-MM-DD format."
 "Freshteam","employee","termination_reason","","string","Reason stating why the employee leaves the organization, specified by the person who updates the employee record."
 "Freshteam","employee","updated_at","","string","Timestamp of when the employee information is last updated, specified in the date-time format. The timestamp is returned as part of the response employee object, on successful processing of an employee create request. If an employee’s details are not updated, the updated_at and created_at values are same."
 "Freshteam","employee","user_academic_suffix_id","","string","Identifier of the academic qualification, which can be specified as a suffix, associated with the employee. This is the field option.id value that is auto-generated when the academic suffix is configured in Freshteam."
+"Freshteam","employee","user_category","","string","Category under which the new hire’s record qualifies to exist in Freshteam. For example, onboarding."
 "Freshteam","employee","user_honorary_suffix_id","","string","Identifier of the honorary title bestowed to the employee. This is the field option.id value that is auto-generated when the honorary suffix is configured in Freshteam."
 "Freshteam","employee","user_professional_suffix_id","","string","Identifier of the professional suffix associated with the employee. This is the field option.id value that is auto-generated when the professional suffix is configured in Freshteam."
 "Freshteam","employee","user_suffix_name_id","","string","Identifier of the name suffix associated with the employee. This is the field option.id value that is auto-generated when the name suffix is configured in Freshteam."
@@ -187,7 +187,6 @@ Possible values: true, false"
 "Freshteam","employee","work_hours","","integer","Number of hours the employee is expected to work."
 "Freshteam","employee","work_numbers","name","string","The name of the phone number (“Work”, “Others”, etc)"
 "Freshteam","employee","work_numbers","number","string","The phonenumber itself."
-"Freshteam","employee","workstation_number","","string","Work desk number of the employee."
 "Freshteam","employee","workstation_number","","string","Work desk number of the employee."
 "Freshteam","level","created_at","","string","Timestamp of when the level is created, specified in the date-time format."
 "Freshteam","level","deleted","","boolean","Specifies whether the level is still a valid hierarchy in the organization. An organization can merge levels or form new levels, in which case, the existing level is deleted from the Freshteam account but the level details can still exist in the system as historical data. For such deleted levels, the deleted attribute value is set to true.
@@ -206,6 +205,7 @@ Possible values: true, false"
 "Freshteam","sub-department","created_at","","string","Timestamp of when the sub-department is created, specified in the date-time format."
 "Freshteam","sub-department","deleted","","boolean","Specifies whether the sub-department is still a valid categorization in the organization.
 Possible values: true, false"
+"Freshteam","sub-department","description","","null",""
 "Freshteam","sub-department","id","","number","Identifier of the sub-department object, auto-generated when a new sub-department is created in the Freshteam system."
 "Freshteam","sub-department","name","","string","Descriptive identifier of the sub-department."
 "Freshteam","sub-department","updated_at","","string","Timestamp of when the sub-department’s name was last modified, specified in the date-time format."
@@ -234,4 +234,4 @@ Possible values: true, false"
 Possible values (enum): pending, approved, declined, cancelled"
 "Freshteam","time-off","status_comments","","string","Reason for declining or cancelling the time-off request."
 "Freshteam","time-off","updated_at","","string","Timestamp of when the time-off request details are last updated, specified in the date-time format."
-,"employee","social_profiles","name","string","Name of the social medium."
+"Freshteam","time-off","user_id","","integer",""
