@@ -9,7 +9,7 @@
       "template": "templates/branch.json"
     },
     "businessunit": {
-      "label": "BusinessUnit",
+      "label": "Business Unit",
       "template": "templates/branch.json"
     },
     "department": {
@@ -30,7 +30,7 @@
       "template": "templates/branch.json"
     },
     "subdepartment": {
-      "label": "Subdepartment",
+      "label": "Sub department",
       "template": "templates/branch.json"
     },
     "team": {
@@ -38,7 +38,7 @@
       "template": "templates/branch.json"
     },
     "timeoff": {
-      "label": "Timeoff",
+      "label": "Time off",
       "template": "templates/branch.json"
     }
   },
